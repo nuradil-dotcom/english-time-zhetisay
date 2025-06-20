@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Time Zhetisay - Ағылшын тілі курсы</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Geologica:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Swiper CSS -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay muted loop playsinline id="bg-video">
+            <source src="video/background_video.mp4" type="video/mp4">
+            <!-- Fallback text if video doesn't load -->
+            Your browser does not support HTML5 video.
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <img src="images/logo.png" alt="English Time Jetisay логотипі" id="logo">
+                <div>
+                    <h1>English Time Zhetisay</h1>
+                    <p>Ағылшын тілін үйренуге арналған курстар</p>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section id="application-form" class="card">
+                <h2>Курсқа тіркелу</h2>
+                <form id="applicationForm">
+                    <div class="form-group">
+                        <label for="name">Аты-жөні*</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Телефон нөмірі*</label>
+                        <input type="tel" id="phone" pattern="^(\+7|8)\s?\(?\d{3}\)?[\s-]?\d{3}[\s-]?\d{2}[\s-]?\d{2}$" required>
+                        <small>Мысалы: 8 701 123 45 67</small>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="grade">Сынып*</label>
+                        <select id="grade" required>
+                            <option value="">Таңдаңыз</option>
+                            <option value="1">Сынып 1</option>
+                            <option value="2">Сынып 2</option>
+                            <option value="3">Сынып 3</option>
+                            <option value="4">Сынып 4</option>
+                            <option value="5">Сынып 5</option>
+                            <option value="6">Сынып 6</option>
+                            <option value="7">Сынып 7</option>
+                            <option value="8">Сынып 8</option>
+                            <option value="9">Сынып 9</option>
+                            <option value="10">Сынып 10</option>
+                            <option value="11">Сынып 11</option>
+                            <option value="underschool">Мектепке дейінгі</option>
+                            <option value="unicol">Университет/колледж</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Электрондық пошта*</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="school">Мектеп атауы*</label>
+                        <input type="text" id="school" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="level">Ағылшын тілі деңгейі*</label>
+                        <select id="level" required>
+                            <option value="">Таңдаңыз</option>
+                            <option value="beginner">A1 Beginner</option>
+                            <option value="elementary">A2 Elementary</option>
+                            <option value="intermediate">B1 Intermediate</option>
+                            <option value="upper">B2 Upper-inter</option>
+                            <option value="advanced">C1 Advanced</option>
+                            <option value="dontknow">Білмеймін</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="purpose">Не үшін оқығыңыз келеді?*</label>
+                        <select id="purpose" required>
+                            <option value="">Таңдаңыз</option>
+                            <option value="ielts">IELTS</option>
+                            <option value="flex">FLEX</option>
+                            <option value="ubt">ҰБТ</option>
+                            <option value="levelup">Деңгей көтеру</option>
+                            <option value="other">Басқа</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="extra">Қосымша ақпарат(міндетті емес)</label>
+                        <textarea id="extra" rows="2"></textarea>
+                    </div>
+                    
+                    <button type="submit">Жіберу</button>
+                </form>
+            </section>
+
+            <!-- Информация о преподавателе -->
+            <section id="teacher-info" class="card">
+                <h2>Біздің оқытушы</h2>
+                <div class="teacher-container">
+                    <div class="teacher-photo">
+                        <img src="images/gaba.jpg" alt="Оқытушы портреті">
+                    </div>
+                    <div class="teacher-details">
+                        <h3>Ғабит Махатов</h3>
+                        <ul>
+                            <li><i class="fas fa-graduation-cap"></i> Ағылшын тілі маманы</li>
+                            <li><i class="fas fa-award"></i>2018 жылдан бері</li>
+                            <li><i class="fas fa-users"></i> 1000+ түлектер</li>
+                            <li><i class="fas fa-comments"></i> Ағылшын, қазақ, орыс тілдерінде</li>
+                        </ul>
+                        <p>"Әр оқушының өзіндік қабілеті бар, менің міндетім - оны ашу!"</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Достижения учеников -->
+            <section id="achievements" class="card">
+                <h2>Оқушылардың жетістіктері</h2>
+                <div class="achievements-grid">
+                    
+                    <a href="ielts.html" class="achievement-item" target="_blank">
+                    <div class="achievement-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h3>IELTS нәтижелері</h3>
+                    <p>(көру үшін басыңыз)</p>
+                    <br>
+                    <p>Оқушыларымыз орташа балы: 6.0</p>
+                    </a>
+
+                    <a href="flex.html" class="achievement-item" target="_blank">
+                    <div class="achievement-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>FLEX Бағдарламасы</h3>
+                    <p>(көру үшін басыңыз)</p>
+                    <br>
+                    <p>Жетісай тарихындағы тұңғыш оқушылар</p>
+                    </a>
+
+                    <div class="achievement-item">
+                    <div class="achievement-icon">
+                        <i class="fas fa-globe-americas"></i>
+                    </div>
+                    <h3>ҰБТ-ға ағылшыннан дайындық</h3>
+                    <p>Орташа балл: 45/50</p>
+                    </div>
+
+                    <a href="graduates.html" class="achievement-item" target="_blank">
+                    <div class="achievement-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Түлектер</h3>
+                    <p>(көру үшін басыңыз)</p>
+                    <br>
+                    <p></p>
+                    </a>
+
+                </div>
+            </section>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                    <img src="images/жания ашимова.jpg" />
+                    <h3>Жания Ашимова</h3>
+                    <p>IELTS: 7.0</p>
+                    <p>FLEX Alumni 2022</p>
+                    <p>MNU’26, El Paso High School</p>
+                    </div>
+
+                    <div class="swiper-slide">
+                    <img src="images/жания  досан.jpg" />
+                    <h3>Жания Досан</h3>
+                    <p>Ағылшын тілінен республикалық олимпиада қатысушысы</p>
+                    </div>
+
+                    <div class="swiper-slide">
+                    <img src="https://placekitten.com/202/200" />
+                    <h3>Оқушы 3</h3>
+                    <p>Жетістіктер 3</p>
+                    </div>
+
+                   <div class="swiper-slide">
+                    <img src="https://placekitten.com/202/200" />
+                    <h3>Оқушы 4</h3>
+                    <p>Жетістіктер 4</p>
+                    </div>
+
+                    
+
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>&copy; 2025 English Time Jetisay</p>
+            <div class="social-icons">
+                <a href="https://instagram.com/englishzhet/" class="social-icon instagram" target="_blank">
+                    <img src="images/instagram.png" alt="instagram">
+                </a>
+                <a href="https://wa.me/77078684369" class="social-icon whatsapp" target="_blank">
+                    <img src="images/whatsapp.png" alt="whatsApp">
+                </a>
+                <a href="https://www.google.com/maps/@40.7758747,68.3262272,3a,75y,18.35h,89.55t/data=!3m7!1e1!3m5!1sze3fY53kLINOT_guh--bBQ!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0.44693289454323804%26panoid%3Dze3fY53kLINOT_guh--bBQ%26yaw%3D18.353195416115906!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI1MDYxMS4wIKXMDSoASAFQAw%3D%3D" class="social-icon location" target="_blank">
+                    <img src="images/location.png" alt="location">
+                </a>
+            </div>
+            <br>
+            <br>
+            <!-- <p><a href="https://www.instagram.com/englishzhet/" target="_blank" style="color:white">Instagram</a>   <a href="https://wa.me/77078684369" target="_blank" style="color:white">WhatsApp</a></p> -->
+            <p>+7 707 868 4369</p>
+            <p>Қашаубаев, 108</p>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

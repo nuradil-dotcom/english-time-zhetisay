@@ -1,0 +1,716 @@
+/* Основные настройки */
+:root {
+  --primary: #4e54c8;
+  --secondary: #8f94fb;
+  --accent: #ff7e5f;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --text: #2d3748;
+  --gray: #6c757d;
+  --light-gray: #e9ecef;
+  --white: #ffffff;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-hover: 0 10px 15px rgba(0, 0, 0, 0.15);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Remove the gradient from body and add video styles */
+body {
+  margin: 0;
+  padding: 0;
+  color: var(--text);
+  line-height: 1.6;
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+#bg-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: cover;
+}
+
+.video-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text contrast */
+  z-index: -1;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.1); /* Полупрозрачный белый */
+  backdrop-filter: blur(8px); /* Размытие фона */
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  margin: 30px auto;
+  max-width: 800px;
+  padding: 40px;
+}
+
+/* Шапка */
+header {
+  text-align: center;
+  padding: 30px 20px;
+  background: linear-gradient(to right, var(--primary), var(--secondary));
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+  z-index: 1;
+  border-radius: 20px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+#logo {
+  height: 90px;
+  width: auto;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+#logo:hover {
+  transform: scale(1.1);
+  box-shadow: var(--shadow-hover); 
+}
+
+header h1 {
+  font-size: 3.0rem;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+header p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  font-weight: 300;
+}
+
+/* Основное содержимое */
+main {
+  padding: 30px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 15px;
+  padding: 30px;
+  margin-bottom: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.card h2 {
+  color: #4e54c8;
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.card h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: #ff7e5f;
+}
+
+/* Форма */
+.form-group {
+  margin-bottom: 25px;
+}
+
+
+.form-group label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #2d3748;
+  font-size: 1.1rem;
+  
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.9);
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #4e54c8;
+  box-shadow: 0 0 0 3px rgba(78, 84, 200, 0.2);
+  background: white;
+}
+
+.form-group small {
+  display: block;
+  margin-top: 5px;
+  color: var(--gray);
+  font-size: 0.85rem;
+}
+
+button {
+  background: linear-gradient(to right, #4e54c8, #8f94fb);
+  color: white;
+  padding: 16px 30px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-top: 10px;
+}
+
+button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+/* Информация о преподавателе */
+.teacher-container {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.teacher-photo {
+  flex-shrink: 0;
+}
+
+.teacher-photo img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid var(--secondary);
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+}
+
+.teacher-photo img:hover {
+  transform: scale(1.1);
+  box-shadow: var(--shadow-hover);
+}
+
+.teacher-details h3 {
+  color: var(--primary);
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.teacher-details ul {
+  list-style: none;
+  padding: 0;
+}
+
+.teacher-details li {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: flex-start;
+  text-align: center;
+}
+
+.teacher-details i {
+  color: var(--accent);
+  margin-right: 10px;
+  font-size: 1.2rem;
+  min-width: 25px;
+  text-align: center;
+}
+
+.teacher-details p {
+  font-style: italic;
+  margin-top: 15px;
+  padding-left: 35px;
+  position: relative;
+  color: var(--primary);
+  font-size: 1.1rem;
+}
+
+.teacher-details p::before {
+  content: "“";
+  position: absolute;
+  left: 0;
+  top: -5px;
+  font-size: 3rem;
+  color: rgba(143, 148, 251, 0.8);
+}
+
+/* Достижения учеников */
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.achievement-item {
+  background: linear-gradient(135deg, var(--light) 0%, var(--light-gray) 100%);
+  border-radius: 12px;
+  padding: 25px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(78, 84, 200, 0.1);
+  text-decoration: none;
+}
+
+.achievement-item:hover {
+  transform: translateY(-8px);
+  background: linear-gradient(135deg, var(--white) 0%, #f0f2ff 100%);
+  box-shadow: 0 10px 25px rgba(143, 148, 251, 0.2);
+  border-color: rgba(78, 84, 200, 0.2);
+}
+
+.achievement-icon {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-size: 1.8rem;
+  color: var(--white);
+  transition: all 0.3s ease;
+}
+
+.achievement-item:hover .achievement-icon {
+  transform: scale(1.1);
+  box-shadow: 0 8px 15px rgba(78, 84, 200, 0.3);
+}
+
+.achievement-item h3 {
+  color: var(--primary);
+  margin-bottom: 12px;
+  font-size: 1.3rem;
+}
+
+.achievement-item p {
+  color: var(--text);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+/* Swiper стили под общий дизайн */
+/* Swiper custom style — адаптивный и масштабный */
+.swiper {
+  width: 95%;
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 30px 0;
+}
+
+.swiper-slide {
+  background: rgba(255, 255, 255, 1); /* Полупрозрачный белый */
+  backdrop-filter: blur(8px); /* Размытие фона */
+  border-radius: 15px;
+  text-align: center;
+  padding: 30px;
+  box-shadow: var(--shadow);
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  transform: scale(0.85);
+  opacity: 0.3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 480px; /* Увеличенная высота */
+}
+
+.swiper-slide-active {
+  transform: scale(1.12);
+  opacity: 1;
+  z-index: 10;
+  box-shadow: var(--shadow-hover);
+}
+
+.swiper-slide img {
+  width: 100%;
+  max-width: 300px;
+  object-fit: cover;
+  height: 280px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow);
+  border: 4px solid var(--secondary);
+  transition: transform 0.3s ease;
+}
+
+.swiper-slide img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+.swiper-slide h3 {
+  color: var(--primary);
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+}
+
+.swiper-slide p {
+  color: var(--text);
+  font-size: 1.05rem;
+}
+
+/* Мобилка адаптация */
+@media (max-width: 768px) {
+  .swiper-slide {
+    padding: 20px;
+    transform: scale(0.95);
+  }
+
+  .swiper-slide-active {
+    transform: scale(1.05);
+  }
+
+  .swiper-slide img {
+    max-width: 220px;
+  }
+
+  .swiper-slide h3 {
+    font-size: 1.3rem;
+  }
+
+  .swiper-slide p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .swiper {
+    padding: 10px 0;
+  }
+
+  .swiper-slide img {
+    max-width: 180px;
+  }
+
+  .swiper-slide {
+    padding: 15px;
+  }
+}
+
+/* Подвал */
+footer {
+  text-align: center;
+  padding: 30px;
+  background: linear-gradient(to right, var(--dark), #495057);
+  color: var(--white);
+  border-radius: 20px;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.footer-contact h3, 
+.footer-social h3 {
+  color: var(--white);
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+  position: relative;
+  display: inline-block;
+}
+
+.footer-contact h3::after,
+.footer-social h3::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: var(--accent);
+}
+
+.footer-contact p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+}
+
+.footer-contact i {
+  min-width: 25px;
+  text-align: center;
+  color: var(--accent);
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 50%;
+  color: var(--white);
+  font-size: 1.4rem;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  background: var(--primary);
+  transform: translateY(-5px);
+}
+
+.copyright {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Центрирование иконок */
+.social-icons-center {
+  display: flex;
+  justify-content: center; /* Горизонтальное центрирование */
+  align-items: center; /* Вертикальное центрирование */
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.social-icons {
+  display: inline-flex;
+  gap: 15px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #f5f5f5;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.social-icon img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+/* Instagram иконка */
+.instagram {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+/* WhatsApp иконка */
+.whatsapp {
+  background: #25D366;
+}
+
+/* Эффекты при наведении */
+.social-icon:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+
+/* Анимации */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.card {
+  animation: fadeIn 0.6s ease forwards;
+}
+
+#application-form {
+  animation-delay: 0.1s;
+}
+
+#teacher-info {
+  animation-delay: 0.2s;
+}
+
+#achievements {
+  animation-delay: 0.3s;
+}
+
+/* Адаптивность */
+
+@media (max-width: 992px) {
+  .container {
+    border-radius: 15px;
+  }
+  
+  header h1 {
+    font-size: 2rem;
+  }
+  
+  header p {
+    font-size: 1rem;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin: 15px;
+    padding: 25px;
+    backdrop-filter: blur(5px);
+  }
+  
+  .card {
+    padding: 20px;
+  }
+  
+  .form-group input, 
+  .form-group select {
+    padding: 12px;
+  }
+    .logo-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  #logo {
+    height: 100px;
+    margin-bottom: 15px;
+  }
+  
+  .teacher-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .teacher-details li {
+    justify-content: center;
+  }
+  
+  .teacher-details p {
+    padding-left: 0;
+    text-align: center;
+  }
+  
+  .teacher-details p::before {
+    display: none;
+  }
+  
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  
+  body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Fallback gradient */
+  }
+
+}
+
+@media (max-width: 576px) {
+  body {
+    padding: 10px;
+  }
+  
+  .container {
+    border-radius: 10px;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  .card {
+    padding: 20px;
+  }
+  
+  .teacher-photo img {
+    width: 150px;
+    height: 150px;
+  }
+  .teacher-details li {
+    justify-content: center;
+    text-align: center;
+  }
+  .achievements-grid {
+    grid-template-columns: 1fr;
+  }
+    
+}

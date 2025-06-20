@@ -1,0 +1,185 @@
+/* Основные настройки */
+:root {
+  --primary: #4e54c8;
+  --secondary: #8f94fb;
+  --accent: #ff7e5f;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --text: #2d3748;
+  --gray: #6c757d;
+  --light-gray: #e9ecef;
+  --white: #ffffff;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  --shadow-hover: 0 10px 15px rgba(0, 0, 0, 0.15);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  background-image: url("../images/usa.jpg"); /* суреттің жолы */
+  background-size: cover;         /* толық жауып тұрады */
+  background-position: center;    /* ортаға туралау */
+  background-repeat: no-repeat;   /* қайталанбау */
+  background-attachment: fixed;   /* прокруткада бірге тұрсын десең */
+}
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5); /* adjust darkness here */
+  z-index: -1;
+}
+header {
+  text-align: center;
+  padding: 30px 20px;
+  background: linear-gradient(to right, var(--primary), var(--secondary));
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+  z-index: 1;
+  
+}
+
+header h1 {
+  font-size: 2.7rem;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  font-weight: 800;
+  line-height: 1.2;
+  text-align: center;
+}
+
+/* Swiper стили под общий дизайн */
+/* Swiper custom style — адаптивный и масштабный */
+.swiper {
+  width: 95%;
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 30px 0;
+}
+
+.swiper-slide {
+  background: rgba(255, 255, 255, 0.6); /* Полупрозрачный белый */
+  backdrop-filter: blur(5px); /* Размытие фона */
+  border-radius: 15px;
+  text-align: center;
+  padding: 30px;
+  box-shadow: var(--shadow);
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  transform: scale(0.85);
+  opacity: 0.4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 600px; /* Увеличенная высота */
+}
+
+.swiper-slide-active {
+  transform: scale(1.12);
+  opacity: 1;
+  z-index: 10;
+  box-shadow: var(--shadow-hover);
+}
+
+.swiper-slide img {
+  width: 350px;
+  max-width: 350px;
+  object-fit: cover;
+  height: 450px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow);
+  border: 4px solid var(--secondary);
+  transition: transform 0.3s ease;
+}
+
+.swiper-slide img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+.swiper-slide h3 {
+  color: var(--primary);
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+}
+
+.swiper-slide p {
+  color: var(--text);
+  font-size: 1.05rem;
+}
+.h1{
+  background-color: white;
+}
+/* Мобилка адаптация */
+@media (max-width: 768px) {
+  .swiper-slide {
+    padding: 20px;
+    transform: scale(0.95);
+    background: white !important;
+  }
+
+  .swiper-slide-active {
+    transform: scale(1.05);
+  }
+
+  .swiper-slide img {
+    max-width: 340px;
+  }
+
+  .swiper-slide h3 {
+    font-size: 1.3rem;
+  }
+
+  .swiper-slide p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .swiper {
+    padding: 10px 0;
+  }
+
+  .swiper-slide img {
+    max-width: 300px;
+  }
+  
+  .swiper-slide {
+    padding: 15px;
+    background: white !important;
+  }
+}
+
+.swipe-hint {
+  text-align: center;
+  color: white;
+  font-size: 1rem;
+  margin-top: -20px;
+  margin-bottom: 10px;
+  animation: fadeBlink 2s infinite;
+}
+
+@keyframes fadeBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}

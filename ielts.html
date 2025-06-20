@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>IELTS Сертификаттар</title>
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+  <!-- Твой общий стиль -->
+  <link rel="stylesheet" href="css/ielts_style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Geologica:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+   <div class="container">
+        <header>
+            <div class="logo-container">
+                <div>
+                    <h1>IELTS Сертификаттары</h1>
+                </div>
+            </div>
+        </header>
+   </div>
+
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide">
+        <img src="images/dossan_zhaniya_65.png" alt="Айгерим сертификат">
+        <h4>Досан Жания</h4>
+      </div>
+
+      <div class="swiper-slide">
+        <img src="images/kabylbek_ayaulym_60.png" alt="Мирас сертификат">
+        <h4>Қабылбек Аяулым</h4>
+      </div>
+
+      <div class="swiper-slide">
+        <img src="images/ashimova_zhaniya_70.png" alt="Жания сертификат">
+        <h4>Жания Ашимова</h4>
+      </div>
+
+      <div class="swiper-slide">
+        <img src="images/kongyrbay_nazerke_65.png" alt="Айдана сертификат">
+        <h4>Қоңғырбай Назерке</h4>
+      </div>
+
+      <div class="swiper-slide">
+        <img src="images/kenes_madina_60.png" alt="Гүлназ сертификат">
+        <h4>Кеңес Мадина</h4>
+      </div>
+
+    </div>
+  </div>
+  <h3 class="swipe-hint">👉 Свайптаңыз →</h3>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Инициализация -->
+  <script>
+    const swiper = new Swiper(".mySwiper", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      centeredSlides: true,
+      loop: true,
+      grabCursor: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      breakpoints: {
+        768: {
+          slidesPerView: 3
+        },
+        576: {
+          slidesPerView: 2
+        },
+        0: {
+          slidesPerView: 1.3
+        }
+      }
+    });
+  </script>
+
+</body>
+</html>
