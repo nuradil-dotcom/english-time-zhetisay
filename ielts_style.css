@@ -20,7 +20,7 @@
   font-family: "Montserrat", sans-serif;
 }
 body {
-  background-image: url("usa(1).jpg"); /* суреттің жолы */
+  background-image: url("usa(1)(1)(1).jpg"); /* суреттің жолы */
   background-size: cover;         /* толық жауып тұрады */
   background-position: center;    /* ортаға туралау */
   background-repeat: no-repeat;   /* қайталанбау */
@@ -153,6 +153,9 @@ header h1 {
   .swiper-slide p {
     font-size: 0.95rem;
   }
+  body {
+    background-attachment: scroll;
+  }
 }
 
 @media (max-width: 480px) {
@@ -168,6 +171,10 @@ header h1 {
     padding: 15px;
     background: white !important;
   }
+  body {
+    background-attachment: scroll;
+  }
+
 }
 
 .swipe-hint {
@@ -182,4 +189,8 @@ header h1 {
 @keyframes fadeBlink {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.3; }
+}
+* {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch; /* for iOS safari smoothness */
 }
