@@ -19,10 +19,21 @@
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
 }
+body {
+  background-color: #1a1a2e; /* или твоя фотка */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  position: relative;   
+
+
+}
 header {
   text-align: center;
   padding: 30px 20px;
-  background: linear-gradient(to right, var(--primary), var(--secondary));
   color: var(--white);
   position: relative;
   overflow: hidden;
