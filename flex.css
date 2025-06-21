@@ -1,0 +1,151 @@
+/* Основные настройки */
+:root {
+  --primary: #4e54c8;
+  --secondary: #8f94fb;
+  --accent: #ff7e5f;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --text: #2d3748;
+  --gray: #6c757d;
+  --light-gray: #e9ecef;
+  --white: #ffffff;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  --shadow-hover: 0 10px 15px rgba(0, 0, 0, 0.15);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+header {
+  text-align: center;
+  padding: 30px 20px;
+  background: linear-gradient(to right, var(--primary), var(--secondary));
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+  z-index: 1;
+  
+}
+
+header h1 {
+  font-size: 2.7rem;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  font-weight: 800;
+  line-height: 1.2;
+  text-align: center;
+}
+/* Фуллскрин слайд */
+.student-slide {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  overflow: hidden;
+}
+
+/* Затемнение фона */
+.student-slide .overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+/* Контент внутри */
+.slide-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  max-width: 1000px;
+  padding: 20px;
+}
+
+/* Фото студента */
+.student-photo {
+  width: 300px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 20px;
+  border: 4px solid var(--secondary);
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+}
+.student-photo:hover {
+  transform: scale(1.05);
+}
+
+/* Текст */
+.student-info {
+  max-width: 500px;
+}
+.student-info h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+.student-info p {
+  font-size: 1.3rem;
+  color: var(--light-gray);
+}
+.student-info blockquote {
+  margin-top: 15px;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--accent);
+}
+.swipe-hint {
+  text-align: center;
+  color: white;
+  font-size: 1rem;
+  margin-top: -20px;
+  margin-bottom: 10px;
+  animation: fadeBlink 2s infinite;
+}
+@keyframes fadeBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+/* Мобилка */
+@media (max-width: 768px) {
+  .slide-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .student-photo {
+    width: 250px;
+    height: 330px;
+  }
+
+  .student-info h2 {
+    font-size: 2rem;
+  }
+
+  .student-info p,
+  .student-info blockquote {
+    font-size: 1rem;
+  }
+}
