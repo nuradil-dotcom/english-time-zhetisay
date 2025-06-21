@@ -20,7 +20,7 @@
   font-family: "Montserrat", sans-serif;
 }
 body {
-  background-image: url("usa(1)(1)(1).jpg"); /* суреттің жолы */
+  background-image: url("../images/usa.jpg"); /* суреттің жолы */
   background-size: cover;         /* толық жауып тұрады */
   background-position: center;    /* ортаға туралау */
   background-repeat: no-repeat;   /* қайталанбау */
@@ -39,9 +39,11 @@ body::before {
 header {
   text-align: center;
   padding: 30px 20px;
+ 
   color: var(--white);
   position: relative;
   overflow: hidden;
+  
 }
 
 header::before {
@@ -61,7 +63,7 @@ header h1 {
   font-size: 2.7rem;
   margin-bottom: 10px;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1.2;
   text-align: center;
 }
@@ -142,7 +144,7 @@ header h1 {
   }
 
   .swiper-slide img {
-    max-width: 310px;
+    max-width: 340px;
   }
 
   .swiper-slide h3 {
@@ -152,9 +154,6 @@ header h1 {
   .swiper-slide p {
     font-size: 0.95rem;
   }
-  body {
-    background-attachment: scroll;
-  }
 }
 
 @media (max-width: 480px) {
@@ -163,17 +162,13 @@ header h1 {
   }
 
   .swiper-slide img {
-    max-width: 270px;
+    max-width: 300px;
   }
   
   .swiper-slide {
     padding: 15px;
     background: white !important;
   }
-  body {
-    background-attachment: scroll;
-  }
-
 }
 
 .swipe-hint {
@@ -188,10 +183,6 @@ header h1 {
 @keyframes fadeBlink {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.3; }
-}
-* {
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch; /* for iOS safari smoothness */
 }
 .navbar {
   background: linear-gradient(to right, var(--primary), var(--secondary));
