@@ -43,7 +43,6 @@ header {
   color: var(--white);
   position: relative;
   overflow: hidden;
-  border-radius: 20px;
 }
 
 header::before {
