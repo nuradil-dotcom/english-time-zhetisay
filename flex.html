@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FLEX Бағжарламас ы</title>
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+  <!-- Твой общий стиль -->
+  <link rel="stylesheet" href="css/flex.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Geologica:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+   <div class="container">
+        <header>
+            <div class="logo-container">
+                <div>
+                    <h1>FLEX Бағдарламасы</h1>
+                </div>
+            </div>
+        </header>
+   </div>
+<section class="swiper mySwiper">
+  <div class="swiper-wrapper">
+
+    <!-- Slide 1 -->
+    <div class="swiper-slide student-slide" style="background-image: url('bg1_backg.jpg');">
+      <div class="overlay"></div>
+      <div class="slide-content">
+        <img src="bg1_main.jpg" alt="Aruzhan" class="student-photo">
+        <div class="student-info">
+          <h2>Aruzhan</h2>
+          <p>FLEX 2023 — Wichita, USA</p>
+          <blockquote>“This journey changed my life forever.”</blockquote>
+          <br>
+          <br>
+          <br>
+          <br>
+          <div class="swipe-hint">
+            <p>👉 Свайптаңыз →</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="swiper-slide student-slide" style="background-image: url('bg2_backg.jpg');">
+      <div class="overlay"></div>
+      <div class="slide-content">
+        <img src="bg2_main.jpg" alt="Dana" class="student-photo">
+        <div class="student-info">
+          <h2>Dana</h2>
+          <p>FLEX 2022 — Colorado Springs</p>
+          <blockquote>“I found who I am.”</blockquote>
+          <br>
+          <br>
+          <br>
+          <br>
+          <div class="swipe-hint">
+            <p>👉 Свайптаңыз →</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+new Swiper('.mySwiper', {
+  loop: true,
+  speed: 900,
+  grabCursor: true,
+  slidesPerView: 1,
+  effect: 'slide',
+});
+</script>
