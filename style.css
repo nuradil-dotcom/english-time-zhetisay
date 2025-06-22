@@ -134,6 +134,7 @@ header p {
   font-size: 1.2rem;
   opacity: 0.9;
   font-weight: 300;
+  line-height: 1.2;
 }
 
 /* Основное содержимое */
@@ -160,6 +161,7 @@ main {
   font-size: 1.8rem;
   position: relative;
   padding-bottom: 10px;
+  line-height: 1.2;
 }
 
 .card h2::after {
@@ -293,6 +295,7 @@ button:hover {
   position: relative;
   color: var(--primary);
   font-size: 1.1rem;
+  line-height: 1.2;
 }
 
 .teacher-details p::before {
@@ -418,6 +421,7 @@ button:hover {
 .swiper-slide p {
   color: var(--text);
   font-size: 1.05rem;
+  line-height: 1.2;
 }
 
 /* Мобилка адаптация */
