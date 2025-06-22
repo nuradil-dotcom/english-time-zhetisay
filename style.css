@@ -89,6 +89,7 @@ header {
   position: relative;
   overflow: hidden;
   border-radius: 20px;
+  height: 150px;
 }
 
 header::before {
@@ -134,7 +135,7 @@ header::before {
   font-family: "Merriweather", serif;
   margin-bottom: 10px;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-  font-weight: 700;
+  font-weight: 800;
   line-height: 1.2;
 }
 
