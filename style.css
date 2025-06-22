@@ -77,7 +77,12 @@ body {
 
 /* Шапка */
 header {
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px; /* space between logo and text */
+  padding: 30px;
+  text-align: left;
   padding: 30px 20px;
   background: linear-gradient(to right, var(--primary), var(--secondary));
   color: var(--white);
@@ -121,9 +126,12 @@ header::before {
   box-shadow: var(--shadow-hover); 
 }
 
-header h1 {
+.header-text {
+  display: flex;
+  flex-direction: column;
+  font-weight: 800;
+  font-size: 28px;
   font-family: "Merriweather", serif;
-  font-size: 3.0rem;
   margin-bottom: 10px;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
   font-weight: 700;
@@ -649,7 +657,7 @@ footer {
   .form-group select {
     padding: 12px;
   }
-    .logo-container {
+/*     .logo-container {
     flex-direction: column;
     text-align: center;
   }
@@ -658,7 +666,7 @@ footer {
     height: 100px;
     margin-bottom: 15px;
   }
-  
+   */
   .teacher-container {
     flex-direction: column;
     text-align: center;
