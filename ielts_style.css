@@ -101,10 +101,10 @@ header h1 {
 }
 
 .swiper-slide img {
-  width: 330px;
+  width: 310px;
   max-width: 350px;
   object-fit: cover;
-  height: 430px;
+  height: 410px;
   border-radius: 15px;
   margin-bottom: 20px;
   box-shadow: var(--shadow);
