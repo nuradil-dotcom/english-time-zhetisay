@@ -127,12 +127,12 @@ header::before {
   box-shadow: var(--shadow-hover); 
 }
 
-header h1 {
+header h2 {
   font-family: "Merriweather", serif;
   display: flex;
   flex-direction: column;
   font-weight: 800;
-  font-size: 25px;
+  font-size: 3.0rem;
   margin-bottom: 10px;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
   font-weight: 800;
