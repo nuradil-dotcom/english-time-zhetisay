@@ -128,11 +128,11 @@ header::before {
 }
 
 .header-text {
+  font-family: "Merriweather", serif; !important
   display: flex;
   flex-direction: column;
   font-weight: 800;
   font-size: 28px;
-  font-family: "Merriweather", serif;
   margin-bottom: 10px;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
   font-weight: 800;
