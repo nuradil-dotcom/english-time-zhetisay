@@ -766,3 +766,15 @@ footer {
     margin: 0.5rem 0;
   }
 }
+.popup {
+  display: none;
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  background: #4caf50;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  z-index: 999;
+}
