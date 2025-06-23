@@ -46,3 +46,25 @@ function showPopup() {
     popup.style.display = 'none';
   }, 4000);
 }
+const swiper = new Swiper(".mySwiper", {
+  slidesPerView: 3,
+  spaceBetween: 30,
+  centeredSlides: true,
+  loop: true,
+  grabCursor: true,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 3
+    },
+    576: {
+      slidesPerView: 2
+    },
+    0: {
+      slidesPerView: 1
+    }
+  }
+});
